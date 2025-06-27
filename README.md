@@ -4,20 +4,20 @@
 Docker는 애플리케이션의 실행에 필요한 환경을 하나의 이미지로 모아두고, 그 이미지를 사용하여 다양한 환경에서 애플리케이션 실행 환경을 구축 및 운용하기 위한 오픈소스 플랫폼.
 도커는 일반적으로 도커 엔진(Docker Engine) 혹은 도커에 관련된 모든 프로젝트를 말합니다.
 --------
-Docker의 구성요소
-Docker daemon (dockerd) : 도커 엔진
+## Docker의 구성요소  
+### Docker daemon (dockerd) : 도커 엔진
 Docker API에 따라 이미지, 컨테이너, 네트워크 등의 도커 오브젝트들을 관리한다. 다른 daemon과 통신할 수도 있다.
 
-Client
+### Client
 도커 사용자들이 도커를 사용하는 방법이다. 사용자가 입력한 명령어를 도커 엔진에 전달하고, 수행하게 된다.
 
-Docker Host
+### Docker Host
 도커가 띄워져있는 서버이다. 컨테이너와 이미지를 관리한다.
 
-Docker registry
+### Docker registry
 외부 이미지 저장소이다. docker pull 명령어를 통해 필요한 이미지를 가져올 수 있고, 가져온 이미지를 docker run하면 컨테이너가 된다. docker push 를 통해 이미지를 푸시할 수 있다.
 
-Docker Image
+### Docker Image
 먼저, 도커 이미지는 Docker File을 사용하여 docker build 명령어를 실행하면 만들어진다. 그 후에 해당 이미지와 Docker run 명령어를 통해 Docker Container가 만들어진다.
 
 도커 이미지는 컨테이너를 생성하고 실행할 때 읽기 전용으로 사용되며, 여러 계층으로 binary 파일로 존재한다.
