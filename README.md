@@ -67,11 +67,13 @@ GitHub Actions는 자동화된 워크플로우를 지원하는 도구로, 저장
 
 CI/CD 과정은 일반적으로 다음과 같은 과정으로 일어난다.  
 
-https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F7JrXc%2FbtsOpFfe520%2FAAAAAAAAAAAAAAAAAAAAAKSU9q_1QmyxHEca2VPQzqpYZE6ssggSn97iMU8vvpOK%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1751295599%26allow_ip%3D%26allow_referer%3D%26signature%3D8e15u4HlJ9BfEWZTza7jT4QFpjI%253D
+![image](https://github.com/user-attachments/assets/fe2171ad-a388-46d6-8b1e-97f78b848092)
+
 
 즉, GitHub Actions는 CI/CD 과정에서 빌드, 테스트, 배포에 대한 로직을 실행시키는 서버(컴퓨터)의 역할을 한다.  
 
-https://blog.kakaocdn.net/dna/mD9VZ/btsJuFSvmwX/AAAAAAAAAAAAAAAAAAAAAKW1XNwYZh57lqqcP-9ikw2YKaZYs2qbZhMv7hncmxFL/img.png?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1751295599&allow_ip=&allow_referer=&signature=KLYhnb1%2FmepukeFKJxxIooWw%2BUg%3D
+![image](https://github.com/user-attachments/assets/060bbca9-ba15-47fa-9bf1-fbc7a73727df)
+
 
 1. 코드 작성 후 Github에 Commit & Push  
 2.Push를 감지해서 Github Actions에 작성한 로직이 실행  
