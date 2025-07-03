@@ -1,5 +1,14 @@
 from django.db import models
 
-# created_at
-# updated_at
+# created_at: 데이터 생성 시간
+# updated_at: 데이터 업데이트 시간
 
+class CommonModel(models.Model):
+    # 생성된 시간 (고정)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    # 데이터가 업데이트 된 시간 => 업데이트 될 때 마다 시간이 계속 변경됨
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        abstract = True # DB에 테이블을 추가하지 마시오.

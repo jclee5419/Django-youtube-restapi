@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 
+from comments.apps import CommentsConfig
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -42,9 +44,19 @@ DJANGO_SYSTEM_APPS = [
 
 CUSTOM_USER_APPS = [
     'users.apps.UsersConfig',
+    'comments.apps.CommentsConfig',
+    'reactions.apps.ReactionsConfig',
+    'subscriptions.apps.SubscriptionsConfig',
+    'videos.apps.VideosConfig',
+    'rest_framework', # DRF
+    'drf_spectacular', # DRF-Spectacular
 ]
 
 INSTALLED_APPS = DJANGO_SYSTEM_APPS + CUSTOM_USER_APPS
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
