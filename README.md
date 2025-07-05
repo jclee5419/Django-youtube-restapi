@@ -1,3 +1,121 @@
+Django 학습 1~4일차 요약
+📄 01. Django 기초
+Django란?
+
+Python 기반의 웹 프레임워크
+
+MTV 패턴 (Model - Template - View)
+
+프로젝트 생성 및 실행
+
+bash
+복사
+편집
+# 프로젝트 생성
+django-admin startproject 프로젝트이름
+
+# 서버 실행
+python manage.py runserver
+앱(App) 생성
+
+bash
+복사
+편집
+python manage.py startapp 앱이름
+🗄️ 02. Django Model
+모델(Model)이란?
+
+데이터베이스 구조를 정의하는 Python 클래스
+
+models.Model을 상속받아 정의
+
+주요 필드
+
+python
+복사
+편집
+models.CharField(max_length=100)
+models.IntegerField()
+models.DateTimeField()
+models.BooleanField()
+마이그레이션
+
+bash
+복사
+편집
+# 모델 변경 사항 생성
+python manage.py makemigrations
+
+# DB에 적용
+python manage.py migrate
+🔑 03. Django Admin
+관리자 페이지
+
+createsuperuser로 관리자 계정 생성
+
+admin.py에 모델 등록
+
+웹에서 데이터 CRUD 가능
+
+명령어
+
+bash
+복사
+편집
+# 관리자 계정 생성
+python manage.py createsuperuser
+모델 등록
+
+python
+복사
+편집
+from django.contrib import admin
+from .models import MyModel
+
+admin.site.register(MyModel)
+커스터마이징 예시
+
+python
+복사
+편집
+@admin.register(MyModel)
+class MyModelAdmin(admin.ModelAdmin):
+    list_display = ('필드1', '필드2')
+    search_fields = ('필드1',)
+    list_filter = ('필드3',)
+⚙️ 04. Django ORM
+ORM(Object-Relational Mapping)
+
+SQL 대신 Python 코드로 DB를 조작하는 방법
+
+주요 명령어
+
+python
+복사
+편집
+# 생성
+Model.objects.create(필드=값)
+
+# 단일 조회
+obj = Model.objects.get(id=1)
+
+# 다중 조회
+objs = Model.objects.filter(조건)
+
+# 수정
+obj.필드 = 값
+obj.save()
+
+# 삭제
+obj.delete()
+
+📝 ORM 실습
+
+<img width="1021" alt="스크린샷 2025-06-19 오전 10 10 05" src="https://github.com/user-attachments/assets/5d2f0b16-1dc3-4db3-935e-0a4c8f2b7e7f" />
+
+<img width="1020" alt="스크린샷 2025-06-19 오전 10 10 56" src="https://github.com/user-attachments/assets/ba027d51-635d-44e2-b5b2-601bc07b4062" />
+
+
 # Django-youtube-restapi
 
 ## Docker  
