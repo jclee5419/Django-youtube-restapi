@@ -22,12 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-i@l+s%o%tx7-d&)^1pk(j219peg^v^(3*h0e&%gj4@00wyj6_8'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+# 'django-insecure-i@l+s%o%tx7-d&)^1pk(j219peg^v^(3*h0e&%gj4@00wyj6_8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(int(os.environ.get('DEBUG', 0))) # 0: False
+# #True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*'] # ex) ec2-123-123-123
 
 
 # Application definition
@@ -145,3 +147,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # custom user model
 AUTH_USER_MODEL = 'users.User'
+
+STATIC_URL = '/static/static/'
+MEDIA_URL = '/static/media/'
+
+MEDIA_ROOT = '/vol/web/media'
+STATIC_ROOT = '/vol/web/static'
