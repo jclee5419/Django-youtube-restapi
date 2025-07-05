@@ -1,4 +1,4 @@
-Django 학습 1~4일차 요약
+# Django 학습 1~4일차 요약
 📄 01. Django 기초
 Django란?
 
